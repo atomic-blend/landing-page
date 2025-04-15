@@ -11,7 +11,7 @@ import {
 import { Analytics } from '@vercel/analytics/react'
 import stylesheet from '~/tailwind.css?url'
 import TailwindIndicator from './components/tailwind-indicator'
-import { useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import { changeTheme, getTheme } from './hooks/use-theme'
 import { HighlightInit } from '@highlight-run/remix/client'
 import { json } from '@remix-run/node'
@@ -30,7 +30,7 @@ export async function loader() {
 
 export default function App() {
     const { ENV } = useLoaderData<typeof loader>()
-    useLayoutEffect(() => {
+    useEffect(() => {
         changeTheme(getTheme())
     }, [])
     return (
