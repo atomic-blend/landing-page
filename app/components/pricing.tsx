@@ -75,6 +75,14 @@ const Pricing = () => {
                         <ul className='mt-8 flex flex-col gap-4'>
                             <li className='flex gap-2'>
                                 <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Unlimited task lists</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Unlimited tags</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
                                 <span>Unlimited members</span>
                             </li>
                             <li className='flex gap-2'>
@@ -100,6 +108,53 @@ const Pricing = () => {
                     </div>
                     <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-b from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-b before:from-primary before:to-primary/10 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
+                            <p>Cloud Free</p>
+                            <div className='flex items-start gap-2'>
+                                <span className='text-2xl text-muted-foreground'>
+                                    $
+                                </span>
+                                <span className='flex items-center gap-2 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-5xl font-medium text-transparent'>
+                                    0.00
+                                </span>
+                            </div>
+                            <p className='text-muted-foreground'>
+                                Perfect for simplicity and ease of use
+                            </p>
+                        </div>
+                        <ul className='mt-8 flex flex-col gap-4 text-left'>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>3 task lists</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>5 tags</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>2 members</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
+                                <span>1GB storage</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
+                                <span>Access to all the apps</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
+                                <span>Unlimited tasks, habits, notes...</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
+                                <span>Email & community support</span>
+                            </li>
+                        </ul>
+                        <Button className='mt-8 w-full'>Get started</Button>
+                    </div>
+                    <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-b from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-b before:from-primary before:to-primary/10 lg:max-w-none'>
+                        <div className='flex flex-col gap-3 text-left'>
                             <p>Cloud</p>
                             <div className='flex items-start gap-2'>
                                 <span className='text-2xl text-muted-foreground'>
@@ -119,6 +174,14 @@ const Pricing = () => {
                             </p>
                         </div>
                         <ul className='mt-8 flex flex-col gap-4 text-left'>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Unlimited task lists</span>
+                            </li>
+                            <li className='flex gap-2'>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Unlimited tags</span>
+                            </li>
                             <li className='flex gap-2'>
                                 <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
                                 <span>Unlimited members</span>
