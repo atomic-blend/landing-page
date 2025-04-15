@@ -15,14 +15,14 @@ export const changeTheme = (theme: string) => {
 }
 
 export const getTheme = (): ThemeName => {
-    let theme: ThemeName = 'orange'
+    let theme: ThemeName = 'violet'
     if (typeof window !== 'undefined') {
         theme = localStorage.getItem('theme') as ThemeName
         if (theme !== null) {
             theme = theme.replace(/['"]+/g, '') as ThemeName
             return theme
         }
-        return 'orange'
+        return 'violet'
     }
     return theme
 }

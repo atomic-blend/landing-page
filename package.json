@@ -32,8 +32,8 @@
         "isbot": "^3.6.13",
         "jotai": "^2.8.4",
         "lucide-react": "^0.400.0",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
         "remix-sitemap": "^3.2.0",
         "tailwind-merge": "^2.3.0",
         "tailwindcss-animate": "^1.0.7"
