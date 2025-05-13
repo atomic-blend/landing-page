@@ -12,6 +12,7 @@ import Swirl from './icons/swirl'
 import Fire from './icons/fire'
 import Lightning from './icons/lightning'
 import Anchor from './icons/anchor'
+import {Link} from "@remix-run/react";
 
 const DownloadHero = () => {
     const [state, handleSubmit] = useForm('mjvqrzpz')
@@ -184,7 +185,8 @@ const DownloadHero = () => {
                                 src="/apple.png"
                                 alt="Debian Logo"
                                 className="h-5 w-5 mr-3"
-                            />                             Download for iOS
+                            />
+                            <Link to={"https://apps.apple.com/us/app/atomic-task/id6743615832"} target={"_blank"}>Download for iOS</Link>
                         </Button>
                         <Button className='mt-auto mr-2 w-full' variant={"outline"}>
                             Download for Android
@@ -196,7 +198,8 @@ const DownloadHero = () => {
                                 src="/apple.png"
                                 alt="Debian Logo"
                                 className="h-5 w-5 mr-3"
-                            />                            Download for MacOS
+                            />
+                            <Link to={""}>Download for MacOS</Link>
                         </Button>
                         <Button className='mt-auto w-full mr-2' >
                             <img
@@ -204,7 +207,7 @@ const DownloadHero = () => {
                                 alt="Debian Logo"
                                 className="h-6 w-6 mr-3 rounded-lg"
                             />
-                            Download for Linux
+                            <Link to={""}>Download for Linux</Link>
                         </Button>
                     </div>
                     <div className={"flex flex-col md:flex-row mt-2"}>
