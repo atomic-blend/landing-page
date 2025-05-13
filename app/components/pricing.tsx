@@ -5,6 +5,7 @@ import { Label } from './ui/label'
 import { useState } from 'react'
 import { cn } from '~/lib/utils'
 import { Badge } from './ui/badge'
+import {Link} from "@remix-run/react";
 
 const Pricing = () => {
     const [checked, setChecked] = useState(false)
@@ -103,7 +104,7 @@ const Pricing = () => {
                             </li>
                         </ul>
                         <Button className='mt-auto w-full' variant={'outline'}>
-                            Get started
+                            <Link to={"/download"}>Get started</Link>
                         </Button>
                     </div>
                     <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-b from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-b before:from-primary before:to-primary/10 lg:max-w-none'>
@@ -151,7 +152,9 @@ const Pricing = () => {
                                 <span>Email & community support</span>
                             </li>
                         </ul>
-                        <Button className='mt-8 w-full'>Get started</Button>
+                        <Button className='mt-8 w-full'>
+                            <Link to={"/download"}>Get started</Link>
+                        </Button>
                     </div>
                     <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-b from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-b before:from-primary before:to-primary/10 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
@@ -203,7 +206,9 @@ const Pricing = () => {
                                 <span>Email & community support</span>
                             </li>
                         </ul>
-                        <Button className='mt-8 w-full'>Get started</Button>
+                        <Button className='mt-8 w-full'>
+                            <Link to={"/download"}>Get started</Link>
+                        </Button>
                     </div>
                     {/* <div className='gradient-border relative max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-br from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-br before:from-primary/30 before:to-primary/5 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
