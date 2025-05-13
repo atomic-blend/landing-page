@@ -199,9 +199,9 @@ const DownloadHero = () => {
                                 alt="Debian Logo"
                                 className="h-5 w-5 mr-3"
                             />
-                            <Link to={""}>Download for MacOS</Link>
+                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/macos/AtomicTask-latest.dmg"}>Download for MacOS</Link>
                         </Button>
-                        <Button className='mt-auto w-full mr-2' >
+                        <Button className='mt-auto w-full mr-2' variant={"outline"}>
                             <img
                                 src="/debian.png"
                                 alt="Debian Logo"
