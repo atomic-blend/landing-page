@@ -11,6 +11,7 @@ import useTheme, { changeTheme } from '~/hooks/use-theme'
 import { cn } from '~/lib/utils'
 import { type ThemeName } from '~/registry/themes'
 import appIcon from "~/assets/appicon_transparent.png";
+import {Button} from "~/components/ui/button";
 
 const Navbar = () => {
     const [theme, setTheme] = useTheme()
@@ -44,6 +45,9 @@ const Navbar = () => {
                     </span>
                 </Link>
                 <div className='flex items-center gap-5'>
+                    <Button className='mt-auto w-full mr-2' >
+                        <Link to={"download"}>Get Started</Link>
+                    </Button>
                     <a
                         href='https://github.com/atomic-blend'
                         target='_blank'

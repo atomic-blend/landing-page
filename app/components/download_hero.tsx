@@ -183,39 +183,49 @@ const DownloadHero = () => {
                         <Button className='mt-auto mr-2 w-full' >
                             <img
                                 src="/apple.png"
-                                alt="Debian Logo"
+                                alt="Apple Logo"
                                 className="h-5 w-5 mr-3"
                             />
                             <Link to={"https://apps.apple.com/us/app/atomic-task/id6743615832"} target={"_blank"}>Download for iOS</Link>
                         </Button>
-                        <Button className='mt-auto mr-2 w-full' variant={"outline"}>
-                            Download for Android
+                        <Button className='mt-auto mr-2 w-full'>
+                            <img
+                                src="/android.png"
+                                alt="Android Logo"
+                                className="h-5 w-5 mr-3"
+                            />
+                            <Link to={"https://brandonguigo.notion.site/Android-Beta-1f491ec0b668804eaa45ce2b92be0721?pvs=4"} target={"_blank"}>Download for Android</Link>
+                            <p className={"ml-3 outline px-1 rounded outline-gray-200 text-gray-beta"}>beta</p>
                         </Button>
                     </div>
                     <div className={"flex flex-col md:flex-row mt-2"}>
                         <Button className='mt-auto w-full mr-2'>
                             <img
                                 src="/apple.png"
-                                alt="Debian Logo"
+                                alt="Apple Logo"
                                 className="h-5 w-5 mr-3"
                             />
-                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/macos/AtomicTask-latest.dmg"}>Download for MacOS</Link>
+                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/macos/AtomicTask-latest.dmg"} target={"_blank"}>Download for MacOS</Link>
                         </Button>
                         <Button className='mt-auto w-full mr-2' variant={"outline"}>
                             <img
-                                src="/debian.png"
-                                alt="Debian Logo"
+                                src="/linux.png"
+                                alt="Linux Logo"
                                 className="h-6 w-6 mr-3 rounded-lg"
                             />
-                            <Link to={""}>Download for Linux</Link>
+                            <Link to={""} target={"_blank"}>Download for Linux</Link>
+                            <p className={"ml-3 outline px-1 rounded outline-gray-800 text-gray-400"}>soon</p>
                         </Button>
                     </div>
                     <div className={"flex flex-col md:flex-row mt-2"}>
                         <Button className='mt-auto w-full mr-2' variant={"outline"}>
-                            Download for Windows
-                        </Button>
-                        <Button className='mt-auto w-full mr-2' variant={"outline"} >
-                            Get the Web App
+                            <img
+                                src="/windows.png"
+                                alt="Windows Logo"
+                                className="h-5 w-5 mr-3"
+                            />
+                            <Link to={""} target={"_blank"}>Download for Windows</Link>
+                            <p className={"ml-3 outline px-1 rounded outline-gray-800 text-gray-400"}>soon</p>
                         </Button>
                     </div>
                 </div>
