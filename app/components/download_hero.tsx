@@ -207,25 +207,23 @@ const DownloadHero = () => {
                             />
                             <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/macos/AtomicTask-latest.dmg"} target={"_blank"}>Download for MacOS</Link>
                         </Button>
-                        <Button className='mt-auto w-full mr-2' variant={"outline"}>
+                        <Button className='mt-auto w-full mr-2'>
                             <img
                                 src="/linux.png"
                                 alt="Linux Logo"
                                 className="h-6 w-6 mr-3 rounded-lg"
                             />
-                            <Link to={""} target={"_blank"}>Download for Linux</Link>
-                            <p className={"ml-3 outline px-1 rounded outline-gray-800 text-gray-400"}>soon</p>
+                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/debian/atomic-task_latest_amd64.deb"} target={"_blank"}>Download for Linux</Link>
                         </Button>
                     </div>
                     <div className={"flex flex-col md:flex-row mt-2"}>
-                        <Button className='mt-auto w-full mr-2' variant={"outline"}>
+                        <Button className='mt-auto w-full mr-2'>
                             <img
                                 src="/windows.png"
                                 alt="Windows Logo"
                                 className="h-5 w-5 mr-3"
                             />
-                            <Link to={""} target={"_blank"}>Download for Windows</Link>
-                            <p className={"ml-3 outline px-1 rounded outline-gray-800 text-gray-400"}>soon</p>
+                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/windows/atomic-tast_latest_windows.zip"} target={"_blank"}>Download for Windows</Link>
                         </Button>
                     </div>
                 </div>
