@@ -223,7 +223,7 @@ const DownloadHero = () => {
                                 alt="Windows Logo"
                                 className="h-5 w-5 mr-3"
                             />
-                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/windows/atomic-task_latest_windows.zip"} target={"_blank"}>Download for Windows</Link>
+                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/windows/atomic-task_latest_windows-installer.exe"} target={"_blank"}>Download for Windows</Link>
                         </Button>
                     </div>
                 </div>
