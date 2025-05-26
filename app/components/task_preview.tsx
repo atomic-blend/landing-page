@@ -3,21 +3,23 @@ import taskHabits from "~/assets/task_habits.png"
 import taskHome from "~/assets/task_home.png"
 import taskDetails from "~/assets/task_details.png"
 import { motion } from 'framer-motion'
+import FeatureCard from './feature-card'
+import { Check, LockKeyhole } from 'lucide-react'
 
 const TaskPreview = () => {
     return (
         <motion.div className="flex justify-center items-center py-8 mb-32">
             <div className="relative flex items-center w-full max-w-[90%] px-8">
                 {/* Left side - Material Elevated Container */}
-                <div className="flex-shrink-0 w-80 mr-12 relative">
-                    <div className="bg-card border border-border rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold mb-3 text-foreground">
-                            Tasks and Habits
-                        </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                            Create, track, and visualize your progress in a beautifully designed interface that keeps you motivated.
-                        </p>
-                    </div>
+                <div className="hidden md:flex flex-shrink-0 w-80 mr-12 relative">
+                    <FeatureCard
+                        title="Task Management"
+                        description="Organize your tasks and habits with ease, using a sleek and intuitive interface."
+                        icon={<Check size={28} className='text-blue-500' />}
+                        backgroundColor="from-blue-500/20 to-blue-500/5"
+                    />
+
+                    {/* Bent Arrow pointing from right side of container to left image */}
                 </div>
 
                 {/* Center - Images */}
@@ -53,15 +55,13 @@ const TaskPreview = () => {
                 </div>
 
                 {/* Right side - Empty space */}
-                <div className="flex-shrink-0 w-80 ml-12 relative">
-                    <div className="bg-card border border-border rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold mb-3 text-foreground">
-                            End-to-End Encryption
-                        </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                            Your data is yours. Not us, not anyone else can access it.
-                        </p>
-                    </div>
+                <div className="hidden md:flex flex-shrink-0 w-80 ml-12 relative">
+                    <FeatureCard
+                        title="End-to-End Encryption"
+                        description="Organize your tasks and habits with ease, using a sleek and intuitive interface."
+                        icon={<LockKeyhole size={28} className='text-green-500' />}
+                        backgroundColor="from-green-500/20 to-green-500/5"
+                    />
                 </div>
             </div>
         </motion.div>

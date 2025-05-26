@@ -40,7 +40,7 @@ const Navbar = () => {
                             theme === 'violet' && 'text-violet-600'
                         )}
                     /> */}
-                    <span className='hidden text-lg font-semibold md:block'>
+                    <span className='hidden text-lg font-semibold md:block text-blue-600'>
                         Atomic Blend
                     </span>
                 </Link>
