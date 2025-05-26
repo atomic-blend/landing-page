@@ -8,6 +8,7 @@ import Footer from '~/components/footer'
 import Hero from '~/components/hero'
 import Navbar from '~/components/navbar'
 import Pricing from '~/components/pricing'
+import TaskPreview from '../components/task_preview'
 
 export const meta: MetaFunction = () => {
     return [
@@ -126,6 +127,7 @@ export default function Index() {
         <div className='dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-35%,hsla(var(--primary)_/_30%),#ffffff00)]'>
             <Navbar />
             <Hero />
+            <TaskPreview />
             <Features />
             <Pricing />
             {/* <Banner /> */}
