@@ -1,6 +1,6 @@
 import { useForm } from '@formspree/react'
 import { motion } from 'framer-motion'
-import {AppleIcon, Image, Loader2Icon, MoveRightIcon} from 'lucide-react'
+import { AppleIcon, Image, Loader2Icon, MoveRightIcon } from 'lucide-react'
 import { cn } from '~/lib/utils'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
@@ -12,7 +12,7 @@ import Swirl from './icons/swirl'
 import Fire from './icons/fire'
 import Lightning from './icons/lightning'
 import Anchor from './icons/anchor'
-import {Link} from "@remix-run/react";
+import { Link } from "@remix-run/react";
 
 const DownloadHero = () => {
     const [state, handleSubmit] = useForm('mjvqrzpz')
@@ -31,12 +31,12 @@ const DownloadHero = () => {
             >
                 <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
                     Get Started with
-                </span>{' '}<br/>
+                </span>{' '}<br />
                 <span
                     className={cn(
                         'relative bg-gradient-to-r from-primary bg-clip-text text-5xl font-extrabold text-transparent lg:text-8xl',
                         theme === 'orange' && 'to-rose-600',
-                        theme === 'blue' && 'to-purple-600',
+                        theme === 'blue' && 'to-blue-600',
                         theme === 'green' && 'to-emerald-600',
                         theme === 'red' && 'to-rose-600',
                         theme === 'yellow' && 'to-yellow-600',
@@ -160,7 +160,7 @@ const DownloadHero = () => {
                         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.6 }}
                         className='mx-auto'
                     >
-                        <Anchor
+                        <Lightning
                             className='h-56'
                             linearFrom='text-primary/10'
                             linearTo='text-primary'
@@ -169,14 +169,14 @@ const DownloadHero = () => {
                 )
             }
             <motion.div className={"flex flex-col"}>
-               <div className={"flex flex-row items-center justify-center mb-4"}>
-                   <img
-                       src="/atomic_task.png"
-                       alt="Atomic Task Logo"
-                       className="h-12 w-12 mr-3 rounded-lg"
-                   />
-                   <p className={"scroll-m-20 font-inter text-2xl font-extrabold tracking-tight lg:text-3xl"}>Atomic Task</p>
-               </div>
+                <div className={"flex flex-row items-center justify-center mb-4"}>
+                    <img
+                        src="/atomic_task.png"
+                        alt="Atomic Task Logo"
+                        className="h-12 w-12 mr-3 rounded-lg"
+                    />
+                    <p className={"scroll-m-20 font-inter text-2xl font-extrabold tracking-tight lg:text-3xl"}>Atomic Task</p>
+                </div>
                 <p className={"text-base text-muted-foreground lg:text-lg"}>Atomic Task is a task management app that helps you stay organized and focused. It is designed to be simple, fast, and easy to use.</p>
                 <div className={"flex flex-col mt-4"}>
                     <div className={"flex flex-col md:flex-row"}>

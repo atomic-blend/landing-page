@@ -1,3 +1,4 @@
+import React from 'react'
 import { useForm } from '@formspree/react'
 import { motion } from 'framer-motion'
 import { Loader2Icon, MoveRightIcon } from 'lucide-react'
@@ -11,64 +12,155 @@ import Flower from './icons/flower'
 import Swirl from './icons/swirl'
 import Fire from './icons/fire'
 import Lightning from './icons/lightning'
-import Anchor from './icons/anchor'
+import taskIcon from '~/assets/task.svg'
+import calendarIcon from '~/assets/calendar.svg'
+import lockIcon from '~/assets/lock.svg'
+
+// Background icon configuration - distributed across entire space with no overlap
+const backgroundIcons = [
+    // Top row
+    { icon: taskIcon, x: '3%', y: '5%', size: 'w-16 h-16', rotation: '15deg', delay: 0.1, mobile: true },
+    { icon: calendarIcon, x: '15%', y: '8%', size: 'w-14 h-14', rotation: '-20deg', delay: 0.15, mobile: false },
+    { icon: lockIcon, x: '28%', y: '6%', size: 'w-16 h-16', rotation: '45deg', delay: 0.2, mobile: true },
+    { icon: taskIcon, x: '42%', y: '9%', size: 'w-12 h-12', rotation: '-30deg', delay: 0.25, mobile: false },
+    { icon: calendarIcon, x: '56%', y: '7%', size: 'w-16 h-16', rotation: '60deg', delay: 0.3, mobile: false },
+    { icon: lockIcon, x: '70%', y: '5%', size: 'w-20 h-20', rotation: '-15deg', delay: 0.35, mobile: true },
+    { icon: taskIcon, x: '84%', y: '8%', size: 'w-14 h-14', rotation: '35deg', delay: 0.4, mobile: false },
+    { icon: calendarIcon, x: '94%', y: '6%', size: 'w-16 h-16', rotation: '-45deg', delay: 0.45, mobile: true },
+
+    // Second row
+    { icon: lockIcon, x: '5%', y: '18%', size: 'w-14 h-14', rotation: '75deg', delay: 0.5, mobile: true },
+    { icon: taskIcon, x: '18%', y: '21%', size: 'w-16 h-16', rotation: '-60deg', delay: 0.55, mobile: true },
+    { icon: calendarIcon, x: '32%', y: '19%', size: 'w-12 h-12', rotation: '30deg', delay: 0.6, mobile: false },
+    { icon: lockIcon, x: '46%', y: '22%', size: 'w-16 h-16', rotation: '-45deg', delay: 0.65, mobile: false },
+    { icon: taskIcon, x: '60%', y: '20%', size: 'w-20 h-20', rotation: '90deg', delay: 0.7, mobile: false },
+    { icon: calendarIcon, x: '74%', y: '18%', size: 'w-14 h-14', rotation: '-75deg', delay: 0.75, mobile: true },
+    { icon: lockIcon, x: '88%', y: '21%', size: 'w-16 h-16', rotation: '25deg', delay: 0.8, mobile: true },
+
+    // Third row (behind text area) - removed center icons
+    { icon: taskIcon, x: '8%', y: '32%', size: 'w-12 h-12', rotation: '-10deg', delay: 0.85, mobile: true },
+    { icon: calendarIcon, x: '22%', y: '35%', size: 'w-16 h-16', rotation: '50deg', delay: 0.9, mobile: true },
+    { icon: lockIcon, x: '78%', y: '37%', size: 'w-16 h-16', rotation: '80deg', delay: 1.1, mobile: true },
+    { icon: taskIcon, x: '92%', y: '35%', size: 'w-14 h-14', rotation: '-25deg', delay: 1.15, mobile: true },
+
+    // Fourth row (behind text area) - removed center icons
+    { icon: calendarIcon, x: '6%', y: '46%', size: 'w-16 h-16', rotation: '40deg', delay: 1.2, mobile: true },
+    { icon: lockIcon, x: '20%', y: '49%', size: 'w-14 h-14', rotation: '-70deg', delay: 1.25, mobile: true },
+    { icon: taskIcon, x: '76%', y: '51%', size: 'w-14 h-14', rotation: '-50deg', delay: 1.45, mobile: true },
+    { icon: calendarIcon, x: '90%', y: '49%', size: 'w-16 h-16', rotation: '70deg', delay: 1.5, mobile: true },
+
+    // Fifth row
+    { icon: lockIcon, x: '4%', y: '60%', size: 'w-16 h-16', rotation: '20deg', delay: 1.55, mobile: true },
+    { icon: taskIcon, x: '17%', y: '63%', size: 'w-12 h-12', rotation: '-80deg', delay: 1.6, mobile: true },
+    { icon: calendarIcon, x: '31%', y: '61%', size: 'w-16 h-16', rotation: '45deg', delay: 1.65, mobile: false },
+    { icon: lockIcon, x: '45%', y: '64%', size: 'w-14 h-14', rotation: '-60deg', delay: 1.7, mobile: false },
+    { icon: taskIcon, x: '59%', y: '62%', size: 'w-16 h-16', rotation: '75deg', delay: 1.75, mobile: false },
+    { icon: calendarIcon, x: '73%', y: '65%', size: 'w-20 h-20', rotation: '-30deg', delay: 1.8, mobile: true },
+    { icon: lockIcon, x: '87%', y: '63%', size: 'w-14 h-14', rotation: '60deg', delay: 1.85, mobile: false },
+
+    // Sixth row
+    { icon: taskIcon, x: '7%', y: '74%', size: 'w-14 h-14', rotation: '-45deg', delay: 1.9, mobile: true },
+    { icon: calendarIcon, x: '21%', y: '77%', size: 'w-16 h-16', rotation: '35deg', delay: 1.95, mobile: true },
+    { icon: lockIcon, x: '35%', y: '75%', size: 'w-12 h-12', rotation: '-85deg', delay: 2.0, mobile: true },
+    { icon: taskIcon, x: '49%', y: '78%', size: 'w-16 h-16', rotation: '50deg', delay: 2.05, mobile: false },
+    { icon: calendarIcon, x: '63%', y: '76%', size: 'w-16 h-16', rotation: '-65deg', delay: 2.1, mobile: true },
+    { icon: lockIcon, x: '77%', y: '79%', size: 'w-16 h-16', rotation: '40deg', delay: 2.15, mobile: false },
+    { icon: taskIcon, x: '91%', y: '77%', size: 'w-20 h-20', rotation: '-20deg', delay: 2.2, mobile: true },
+]
 
 const Hero = () => {
     const [state, handleSubmit] = useForm('mjvqrzpz')
     const [theme] = useTheme()
+    const [isMobile, setIsMobile] = React.useState(false)
+
+    React.useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
 
     return (
-        <main className='mx-auto my-10 flex min-h-[calc(90vh-73px)] max-w-3xl flex-col justify-center gap-6 px-5 text-center lg:my-0'>
-            <motion.h1
-                initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: 'easeOut' }}
-                className={cn(
-                    'scroll-m-20 font-inter text-4xl font-extrabold tracking-tight lg:text-5xl'
-                )}
-            >
-                <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                    The All-in-One,
-                </span>{' '}
-                <span
+        <main className='relative w-full min-h-screen flex flex-col justify-center gap-6 px-5 text-center'>
+            {/* Scattered Background Icons */}
+            {backgroundIcons
+                .filter(iconConfig => !isMobile || iconConfig.mobile)
+                .map((iconConfig, index) => (
+                    <motion.img
+                        key={index}
+                        src={iconConfig.icon}
+                        alt=""
+                        className={cn(
+                            'absolute opacity-10 pointer-events-none select-none z-0',
+                            iconConfig.size
+                        )}
+                        style={{
+                            left: iconConfig.x,
+                            top: iconConfig.y,
+                            transform: `rotate(${iconConfig.rotation})`,
+                            filter: 'brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%) contrast(90%)'
+                        }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 0.1, scale: 1 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: iconConfig.delay,
+                            ease: 'easeOut'
+                        }}
+                    />
+                ))}
+
+            <div className="max-w-3xl flex flex-col justify-center items-center mx-auto gap-4 relative z-10 md:mt-24">
+                <motion.h1
+                    initial={{ opacity: 0, y: -10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
                     className={cn(
-                        'relative bg-gradient-to-r from-primary bg-clip-text text-5xl font-extrabold text-transparent lg:text-8xl',
-                        theme === 'orange' && 'to-rose-600',
-                        theme === 'blue' && 'to-purple-600',
-                        theme === 'green' && 'to-emerald-600',
-                        theme === 'red' && 'to-rose-600',
-                        theme === 'yellow' && 'to-yellow-600',
-                        theme === 'violet' && 'to-violet-600',
-                        theme === 'gray' && 'to-gray-600',
-                        theme === 'neutral' && 'to-neutral-600',
-                        theme === 'slate' && 'to-slate-600',
-                        theme === 'stone' && 'to-stone-600',
-                        theme === 'zinc' && 'to-zinc-600',
-                        theme === 'rose' && 'to-pink-600'
+                        'scroll-m-20 font-inter text-4xl font-extrabold tracking-tight lg:text-5xl'
                     )}
                 >
-                    Privacy-first
-                </span>
-                <br />
-                <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
+                    <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
+                        Tools you know. <br />
+                    </span>{' '}
+                    <span
+                        className={cn(
+                            'relative bg-gradient-to-r from-primary bg-clip-text text-5xl font-extrabold text-transparent lg:text-6xl underline decoration-8 decoration-primary/50',
+                            theme === 'orange' && 'to-rose-600',
+                            theme === 'blue' && 'to-blue-600',
+                            theme === 'green' && 'to-emerald-600',
+                            theme === 'red' && 'to-rose-600',
+                            theme === 'yellow' && 'to-yellow-600',
+                            theme === 'violet' && 'to-violet-600',
+                            theme === 'gray' && 'to-gray-600',
+                            theme === 'neutral' && 'to-neutral-600',
+                            theme === 'slate' && 'to-slate-600',
+                            theme === 'stone' && 'to-stone-600',
+                            theme === 'zinc' && 'to-zinc-600',
+                            theme === 'rose' && 'to-pink-600'
+                        )}
+                    >
+                        Privacy you never had.
+                    </span>
+                    <br />
+                    {/* <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
                     App Suite{' '}
-                </span>
-            </motion.h1>
-            <motion.p
-                initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
-                className='text-base text-muted-foreground lg:text-lg'
-            >
-                Welcome to <span className='text-primary'>Atomic Blend</span>,
-                Your gateway to taking control of your data, streamlining your tools, and building a future rooted in privacy and freedom.{' '}
+                </span> */}
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+                    className='text-base text-muted-foreground lg:text-lg'
+                >
 
-                <span className='hidden lg:block'>
-                    Discover a brighter future with us.
-                </span>
-            </motion.p>
+                    A complete, beautifully integrated suite for your tasks, notes, emails, calendars, and files — designed for simplicity and privacy from day one.
+                </motion.p>
+            </div>
             {
                 theme !== 'rose' &&
                 theme !== 'green' &&
@@ -165,7 +257,7 @@ const Hero = () => {
                         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.6 }}
                         className='mx-auto'
                     >
-                        <Anchor
+                        <Lightning
                             className='h-56'
                             linearFrom='text-primary/10'
                             linearTo='text-primary'

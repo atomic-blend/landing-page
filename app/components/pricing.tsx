@@ -5,7 +5,7 @@ import { Label } from './ui/label'
 import { useState } from 'react'
 import { cn } from '~/lib/utils'
 import { Badge } from './ui/badge'
-import {Link} from "@remix-run/react";
+import { Link } from "@remix-run/react";
 
 const Pricing = () => {
     const [checked, setChecked] = useState(false)
@@ -33,7 +33,9 @@ const Pricing = () => {
                     </h1>
                 </div>
                 <p className='text-lg text-muted-foreground'>
-                    Select the ideal plan for your business requirements
+                    Find your plan that fits your needs, whether you prefer
+                    self-hosting for complete control or our cloud solution for
+                    convenience.
                 </p>
                 <div className='mt-20 flex items-center justify-center space-x-2'>
                     <Label
