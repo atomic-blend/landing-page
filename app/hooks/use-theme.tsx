@@ -9,7 +9,7 @@ export const changeTheme = (theme: string) => {
     Object.keys(themeObject?.cssVars.dark).forEach((property) => {
         root.style.setProperty(
             `--${property}`,
-            themeObject?.cssVars.dark[property]
+            themeObject?.cssVars.light[property]
         )
     })
 }
