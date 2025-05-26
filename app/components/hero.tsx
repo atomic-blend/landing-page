@@ -29,13 +29,13 @@ const Hero = () => {
                 )}
             >
                 <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                    The All-in-One,
+                    Tools you know. <br />
                 </span>{' '}
                 <span
                     className={cn(
-                        'relative bg-gradient-to-r from-primary bg-clip-text text-5xl font-extrabold text-transparent lg:text-8xl',
+                        'relative bg-gradient-to-r from-primary bg-clip-text text-5xl font-extrabold text-transparent lg:text-6xl',
                         theme === 'orange' && 'to-rose-600',
-                        theme === 'blue' && 'to-purple-600',
+                        theme === 'blue' && 'to-blue-600',
                         theme === 'green' && 'to-emerald-600',
                         theme === 'red' && 'to-rose-600',
                         theme === 'yellow' && 'to-yellow-600',
@@ -48,12 +48,12 @@ const Hero = () => {
                         theme === 'rose' && 'to-pink-600'
                     )}
                 >
-                    Privacy-first
+                    Privacy you never had.
                 </span>
                 <br />
-                <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
+                {/* <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
                     App Suite{' '}
-                </span>
+                </span> */}
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0, y: -10 }}
@@ -62,12 +62,8 @@ const Hero = () => {
                 transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
                 className='text-base text-muted-foreground lg:text-lg'
             >
-                Welcome to <span className='text-primary'>Atomic Blend</span>,
-                Your gateway to taking control of your data, streamlining your tools, and building a future rooted in privacy and freedom.{' '}
 
-                <span className='hidden lg:block'>
-                    Discover a brighter future with us.
-                </span>
+                A complete, beautifully integrated suite for your tasks, notes, emails, calendars, and files — designed for simplicity and privacy from day one.
             </motion.p>
             {
                 theme !== 'rose' &&
@@ -165,7 +161,7 @@ const Hero = () => {
                         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.6 }}
                         className='mx-auto'
                     >
-                        <Anchor
+                        <Lightning
                             className='h-56'
                             linearFrom='text-primary/10'
                             linearTo='text-primary'
