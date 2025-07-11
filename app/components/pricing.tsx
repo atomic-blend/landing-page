@@ -68,7 +68,7 @@ const Pricing = () => {
                                     $
                                 </span>
                                 <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-5xl font-medium text-transparent'>
-                                    0
+                                    Free Forever
                                 </span>
                             </div>
                             <p className='text-muted-foreground'>

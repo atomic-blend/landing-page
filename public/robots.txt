@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://saasstellar.nader.run
+Host: https://atomic-blend.com
 
 # Sitemaps
-Sitemap: https://saasstellar.nader.run/sitemap.xml
+Sitemap: https://atomic-blend.com/sitemap.xml

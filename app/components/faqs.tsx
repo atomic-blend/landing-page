@@ -17,8 +17,8 @@ const faqs = [
     },
     {
         question:
-            'Wait… you’re using AWS for your Cloud version — don’t they spy on our data?',
-        answer: "No worries! We only use AWS for its reliable cloud infrastructure. Thanks to end-to-end encryption, AWS never has access to your actual data. You stay in full control at all times.",
+            'Where do you store my data? Where does it transit?',
+        answer: "No worries! Hetzner Cloud is the hosting provider for our Cloud version. Thanks to end-to-end encryption, Hetzner, Firebase Messaging or any external service we might use in the future never has access to your actual data. You stay in full control at all times.",
     },
     {
         question:

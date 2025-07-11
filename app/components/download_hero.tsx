@@ -194,8 +194,8 @@ const DownloadHero = () => {
                                 alt="Android Logo"
                                 className="h-5 w-5 mr-3"
                             />
-                            <Link to={"https://brandonguigo.notion.site/Android-Beta-1f491ec0b668804eaa45ce2b92be0721?pvs=4"} target={"_blank"}>Download for Android</Link>
-                            <p className={"ml-3 outline px-1 rounded outline-gray-200 text-gray-beta"}>beta</p>
+                            <Link to={"https://play.google.com/store/apps/details?id=fr.atomicblend.app"} target={"_blank"}>Download for Android</Link>
+                            {/* <p className={"ml-3 outline px-1 rounded outline-gray-200 text-gray-beta"}>beta</p> */}
                         </Button>
                     </div>
                     <div className={"flex flex-col md:flex-row mt-2"}>
@@ -205,7 +205,7 @@ const DownloadHero = () => {
                                 alt="Apple Logo"
                                 className="h-5 w-5 mr-3"
                             />
-                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/macos/AtomicTask-latest.dmg"} target={"_blank"}>Download for MacOS</Link>
+                            <Link to={"https://atomic-blend-release.s3.us-east-005.backblazeb2.com/task/mac/AtomicTask-latest.dmg"} target={"_blank"}>Download for MacOS</Link>
                         </Button>
                         <Button className='mt-auto w-full mr-2'>
                             <img
@@ -213,7 +213,7 @@ const DownloadHero = () => {
                                 alt="Linux Logo"
                                 className="h-6 w-6 mr-3 rounded-lg"
                             />
-                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/debian/atomic-task_latest_amd64.deb"} target={"_blank"}>Download for Linux</Link>
+                            <Link to={"https://atomic-blend-release.s3.us-east-005.backblazeb2.com/task/debian/atomic-task_latest_amd64.deb"} target={"_blank"}>Download for Linux</Link>
                         </Button>
                     </div>
                     <div className={"flex flex-col md:flex-row mt-2"}>
@@ -223,7 +223,68 @@ const DownloadHero = () => {
                                 alt="Windows Logo"
                                 className="h-5 w-5 mr-3"
                             />
-                            <Link to={"https://atomic-blend-release.s3.eu-west-1.amazonaws.com/windows/atomic-task_latest_windows-installer.exe"} target={"_blank"}>Download for Windows</Link>
+                            <Link to={"https://atomic-blend-release.s3.us-east-005.backblazeb2.com/task/windows/AtomicTaskInstaller-latest.exe"} target={"_blank"}>Download for Windows</Link>
+                        </Button>
+                    </div>
+                </div>
+            </motion.div>
+
+            <motion.div className={"flex flex-col mt-16"}>
+                <div className={"flex flex-row items-center justify-center mb-4"}>
+                    <img
+                        src="/atomic_notes.png"
+                        alt="Atomic Notes Logo"
+                        className="h-12 w-12 mr-3 rounded-lg"
+                    />
+                    <p className={"scroll-m-20 font-inter text-2xl font-extrabold tracking-tight lg:text-3xl"}>Atomic Notes</p>
+                </div>
+                <p className={"text-base text-muted-foreground lg:text-lg"}>Atomic Notes is a note-taking app like Apple Notes. It is designed to be simple, fast, and easy to use.</p>
+                <div className={"flex flex-col mt-4"}>
+                    <div className={"flex flex-col md:flex-row"}>
+                        <Button className='mt-auto mr-2 w-full' >
+                            <img
+                                src="/apple.png"
+                                alt="Apple Logo"
+                                className="h-5 w-5 mr-3"
+                            />
+                            <Link to={"https://apps.apple.com/us/app/atomic-notes/id6747767868"} target={"_blank"}>Download for iOS</Link>
+                        </Button>
+                        <Button className='mt-auto mr-2 w-full'>
+                            <img
+                                src="/android.png"
+                                alt="Android Logo"
+                                className="h-5 w-5 mr-3"
+                            />
+                            <Link to={"https://play.google.com/store/apps/details?id=fr.atomicblend.notes"} target={"_blank"}>Download for Android</Link>
+                            {/* <p className={"ml-3 outline px-1 rounded outline-gray-200 text-gray-beta"}>beta</p> */}
+                        </Button>
+                    </div>
+                    <div className={"flex flex-col md:flex-row mt-2"}>
+                        <Button className='mt-auto w-full mr-2'>
+                            <img
+                                src="/apple.png"
+                                alt="Apple Logo"
+                                className="h-5 w-5 mr-3"
+                            />
+                            <Link to={"https://atomic-blend-release.s3.us-east-005.backblazeb2.com/notes/mac/AtomicNotes-latest.dmg"} target={"_blank"}>Download for MacOS</Link>
+                        </Button>
+                        <Button className='mt-auto w-full mr-2'>
+                            <img
+                                src="/linux.png"
+                                alt="Linux Logo"
+                                className="h-6 w-6 mr-3 rounded-lg"
+                            />
+                            <Link to={"https://atomic-blend-release.s3.us-east-005.backblazeb2.com/notes/debian/atomic-notes_latest_amd64.deb"} target={"_blank"}>Download for Linux</Link>
+                        </Button>
+                    </div>
+                    <div className={"flex flex-col md:flex-row mt-2"}>
+                        <Button className='mt-auto w-full mr-2'>
+                            <img
+                                src="/windows.png"
+                                alt="Windows Logo"
+                                className="h-5 w-5 mr-3"
+                            />
+                            <Link to={"https://atomic-blend-release.s3.us-east-005.backblazeb2.com/notes/windows/AtomicNotesInstaller-latest.exe"} target={"_blank"}>Download for Windows</Link>
                         </Button>
                     </div>
                 </div>
